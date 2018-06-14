@@ -17,6 +17,7 @@ import spacey.states.gridState.World;
 
 public class GridState extends State {
 
+    //Warning. This class is a complete mess. Do not look in the eyes.
     //ArrayList
     private ArrayList<Tile> gridSpace;
     private ArrayList<Tile> newGridSpace;

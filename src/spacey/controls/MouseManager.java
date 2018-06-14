@@ -3,7 +3,6 @@ package spacey.controls;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
-import spacey.gfx.GUI;
 import spacey.states.Handler;
 
 public class MouseManager implements MouseListener, MouseMotionListener {

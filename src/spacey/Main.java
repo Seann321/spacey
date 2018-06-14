@@ -56,7 +56,7 @@ public class Main implements Runnable {
         display.getCanvas().addMouseListener(mouseManager);
         display.getCanvas().addMouseMotionListener(mouseManager);
         Assets.init();
-        
+
     }
 
     private void tick() {
@@ -74,8 +74,6 @@ public class Main implements Runnable {
         g = bs.getDrawGraphics();
 
         g.clearRect(0, 0, width, height);
-        
-        
 
         //Everything below is what is drawn on the screen.
         handler.getCurrentState().render(g);

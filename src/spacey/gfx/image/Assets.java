@@ -9,7 +9,6 @@ public class Assets {
     public static BufferedImage shipHull, shipWall, battery, thruster, controlStation, solarPanel, remove, reactor,
             voidA, voidB, voidC, voidD, shield, shieldBlock, offThruster, planetA, planetB, planetC, planetD, planetE, planetF,
             activeShieldBlock, asteroidA, asteroidB, asteroidC, warpDrive, activeWarpDrive, player, oxygenGenerator;
-    //public static BufferedImage[] player2;
 
     public static void init() {
 

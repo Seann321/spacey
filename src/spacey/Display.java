@@ -55,7 +55,7 @@ public class Display {
     public void changeSize(int x, int y) {
         width = x;
         height = y;
-        
+
         frame.dispose();
         frame.setUndecorated(true);
         frame.setSize(x, y);
@@ -63,7 +63,7 @@ public class Display {
         frame.setResizable(false);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
-        
+
         canvas.setPreferredSize(new Dimension(x, y));
         canvas.setMaximumSize(new Dimension(x, y));
         canvas.setMinimumSize(new Dimension(x, y));

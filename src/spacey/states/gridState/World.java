@@ -71,7 +71,6 @@ public class World {
         return false;
     }
 
-
     public void render(Graphics g) {
         voidSpace.stream().filter((t) -> (t.getTileType() != Tile.TileType.ASTEROID)).forEachOrdered((t) -> {
             t.voidRender(g);

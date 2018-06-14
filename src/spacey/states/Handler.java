@@ -3,7 +3,6 @@ package spacey.states;
 import java.awt.image.BufferStrategy;
 import spacey.Display;
 import spacey.Main;
-import spacey.Spacey;
 import spacey.controls.KeyManager;
 import spacey.controls.MouseManager;
 import spacey.gfx.GUI;
@@ -26,7 +25,7 @@ public class Handler {
         Scale = (double) (main.getWidth()) / 1600D;
         StartScale = Scale;
     }
-    
+
     public State getCurrentState() {
         return State.currentState;
     }

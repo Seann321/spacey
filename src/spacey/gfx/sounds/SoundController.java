@@ -8,7 +8,6 @@ import java.util.logging.Logger;
 import javafx.embed.swing.JFXPanel;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import spacey.states.Handler;
 
 public class SoundController {
 

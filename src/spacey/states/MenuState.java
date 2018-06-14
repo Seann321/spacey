@@ -10,7 +10,6 @@ import java.util.Random;
 import spacey.gfx.GUI;
 import spacey.gfx.UIObject;
 import spacey.gfx.sounds.SoundController;
-import spacey.states.gridState.Tile;
 import spacey.states.gridState.World;
 
 public class MenuState extends State {

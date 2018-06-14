@@ -226,7 +226,7 @@ public class TutorialState extends State {
             int hH = handler.getHeight() / 2;
             if (handler.getMM().isLeftPressed()) {
                 if (world.getTileAt(hW, hH).equals(world.getTileAt(handler.getMM().getMouseX(), handler.getMM().getMouseY()))) {
-                    world.getTileAt(hW,hH).setTileType(currentlySelected);
+                    world.getTileAt(hW, hH).setTileType(currentlySelected);
                 }
                 changeNearTile(world.getTileAt(handler.getMM().getMouseX(), handler.getMM().getMouseY()), currentlySelected);
                 world.getTileAt(handler.getMM().getMouseX(), handler.getMM().getMouseY()).setTexture(-1);
