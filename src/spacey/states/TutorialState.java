@@ -191,7 +191,7 @@ public class TutorialState extends State {
             title.setText("You are now ready to play!");
             welcomeA.setY(welcomeA.getY() - 180);
             welcomeA.setAllColors(Color.green);
-            welcomeA.setText("*HINT* During FLIGHT mode you can click the top right.");
+            welcomeA.setText("*HINT* During FLIGHT mode theres options in the top right.");
         }
         if (editable) {
             battery = batteryCount == 1;

@@ -38,9 +38,9 @@ public class GridState extends State {
     UIObject stopShipUI = new UIObject("Stop Ship (Will only stop speeds under 10)", 0, 115, false, Color.lightGray, Color.gray, gameGUI);
 
     //Power Levels
-    UIObject enginePowerUI = new UIObject("Engine Power: " + "100.0%", handler.getWidth() - 265, 15, false, Color.lightGray, Color.gray, gameGUI);
-    UIObject shieldPowerUI = new UIObject("Shield Powered: " + false, handler.getWidth() - 265, 45, false, Color.lightGray, Color.gray, gameGUI);
-    UIObject warpPowerUI = new UIObject("Warp Powered: " + false, handler.getWidth() - 265, 75, false, Color.lightGray, Color.gray, gameGUI);
+    UIObject enginePowerUI = new UIObject("* Engine Power: " + "100.0%", handler.getWidth() - 290, 15, false, Color.lightGray, Color.gray, gameGUI);
+    UIObject shieldPowerUI = new UIObject("* Shield Powered: " + false, handler.getWidth() - 290, 45, false, Color.lightGray, Color.gray, gameGUI);
+    UIObject warpPowerUI = new UIObject("* Warp Powered: " + false, handler.getWidth() - 290, 75, false, Color.lightGray, Color.gray, gameGUI);
 
     //Objects
     UIObject sizeUI = new UIObject("Size: " + 0, 0, 65, false, Color.white, Color.white, menu);
@@ -207,9 +207,9 @@ public class GridState extends State {
                         for (Tile tile : gridSpace) {
                             if (tile.getBounds().intersects(a.getBounds())) {
                                 tile.setTileType(Tile.TileType.EMPTYSPACE);
-                                countShip();
                             }
                         }
+                        countShip();
                     }
                 }
             }
@@ -249,8 +249,8 @@ public class GridState extends State {
         }
         cordsUI.setText("Current Cords: X " + newGridSpace.get(hW * hH / 2 + hH / 2).getX() + ", Y " + newGridSpace.get(hW * hH / 2 + hH / 2).getY());
         speedUI.setText("Vert Speed: " + Math.floor(vertVelo * -1) + " Side Speed: " + Math.floor(sideVelo));
-        shieldPowerUI.setText("Shield Powered: " + shieldPower);
-        warpPowerUI.setText("Warp Powered: " + warpPower);
+        shieldPowerUI.setText("* Shield Powered: " + shieldPower);
+        warpPowerUI.setText("* Warp Powered: " + warpPower);
         if (shieldPower) {
             if (sideVelo > 1 || sideVelo < -1 || vertVelo > 1 || vertVelo < -1) {
                 return;
@@ -422,7 +422,7 @@ public class GridState extends State {
                 });
                 engineSpeedSpot = engineSpeeds.length - 1;
                 enginePower = engineSpeeds[engineSpeedSpot];
-                enginePowerUI.setText("Engine Power: " + enginePower * 100 + "%");
+                enginePowerUI.setText("* Engine Power: " + enginePower * 100 + "%");
                 countShip();
                 start.setText("Click to enter build mode");
                 start.setY(start.getY() + 23);
@@ -621,10 +621,10 @@ public class GridState extends State {
 
             }
             if (controlStationCount > 0 && powerCellsRemaining >= thrusterCount * enginePower) {
-                if (thrusterCount < 1) {
+                if (thrusterCount < tempThrustersNeeded) {
                     if (handler.getKM().left || handler.getKM().right || handler.getKM().up || handler.getKM().down) {
-                        if (!message.getText().equals("No Thrusters.")) {
-                            printMessage(Color.red, "No Thrusters.");
+                        if (!message.getText().equals("Need more Thrusters.")) {
+                            printMessage(Color.red, "Need more Thrusters.");
                         }
                     }
                 }

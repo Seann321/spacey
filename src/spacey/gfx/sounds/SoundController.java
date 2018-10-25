@@ -14,7 +14,8 @@ public class SoundController {
     public static boolean activeTimer = false;
     public static double volume = .1;
     public static int mp3sLocation = 0;
-    public static String mp3s[] = new String[]{"src\\spacey\\gfx\\sounds\\MenuMusic.mp3",
+    public static String mp3s[] = new String[]{"src\\spacey\\gfx\\sounds\\Silence.mp3",
+        "src\\spacey\\gfx\\sounds\\MenuMusic.mp3",
         "src\\spacey\\gfx\\sounds\\TrackA.mp3",
         "src\\spacey\\gfx\\sounds\\TrackB.mp3",
         "src\\spacey\\gfx\\sounds\\TrackC.mp3",
@@ -46,7 +47,7 @@ public class SoundController {
 
     public synchronized void timing() {
         task = new TimerTask() {
-            private final double MAX_SECONDS = hit.getDuration().toSeconds() + 5;
+            private final double MAX_SECONDS = hit.getDuration().toSeconds();
             double seconds;
 
             @Override
