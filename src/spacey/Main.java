@@ -56,7 +56,6 @@ public class Main implements Runnable {
         display.getCanvas().addMouseListener(mouseManager);
         display.getCanvas().addMouseMotionListener(mouseManager);
         Assets.init();
-
     }
 
     private void tick() {

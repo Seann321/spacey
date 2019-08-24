@@ -186,7 +186,7 @@ public class GridState extends State {
     boolean powerWarningPrinted = false;
 
     public void gameTick() {
-        if (!warpPower) {
+        if (!warpPower && !centeringShip) {
             for (Tile t : gridSpace) {
                 if (t.getTileType() == Tile.TileType.EMPTYSPACE) {
                     continue;
